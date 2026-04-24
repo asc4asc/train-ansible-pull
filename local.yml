@@ -1,0 +1,15 @@
+---
+- name: History of bash for quick use as menu.
+  hosts: localhost
+  connection: local
+  # become: true
+  gather_facts: true
+
+  tasks:
+    - name: Copy bash_history
+      ansible.builtin.copy:
+        src: put2file_bash_history.txt
+        dest: "{{ lookup('env','HOME') }}/.bash_history"
+        owner: "{{ ansible_user_id }}"
+        group: "{{ ansible_user_id }}"
+        mode: '0600'

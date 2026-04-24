@@ -1,0 +1,5 @@
+Hier werden Befehle zum einfachen Abruf in die Bash History des Benutzers gebracht.
+
+simple demo call:
+
+ansible-pull -U https://github.com/asc4asc/ansible-pull.git -C add2history
